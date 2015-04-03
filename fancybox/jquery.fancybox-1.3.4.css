@@ -25,7 +25,8 @@
 	margin-left: -20px;
 	cursor: pointer;
 	overflow: hidden;
-	z-index: 1104;
+	/*z-index: 1104;*/
+	z-index: 999999;
 	display: none;
 }
 
@@ -43,7 +44,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1100;
+	/*z-index: 1100;*/
+	z-index: 99999;
 	display: none;
 }
 
@@ -60,7 +62,8 @@
 	top: 0;
 	left: 0;
 	padding: 20px;
-	z-index: 1101;
+	/*z-index: 1101;*/
+	z-index: 999999;
 	outline: none;
 	display: none;
 }

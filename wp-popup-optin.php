@@ -39,11 +39,13 @@ class wpPopupOptin {
 	public function __construct() {
 		//add_filter( 'the_content', array( $this, 'the_content' ) );	
 
+		add_action( 'wp_enqueue_scripts', array( $this, 'wpo_front_scripts_head' ) );
 		add_action( 'init', array( $this, 'wpo_init' ) );
 		add_action( 'init', array( $this, 'wpo_setcookie' ) );
 		add_action( 'wp_head', array( $this, 'wpo_getcookie' ) );
 		add_action( 'admin_menu', array( $this, 'wpo_admin_actions' ) );
 		add_action( 'wp_head', array( $this, 'wpo_front_styles' ) );
+		
 		add_action( 'wp_footer', array( $this, 'wpo_front_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'wpo_show_content' ) );		
 		add_action( 'admin_print_scripts', array( $this, 'wpo_admin_scripts' ) );
@@ -313,9 +315,13 @@ class wpPopupOptin {
 	function wpo_init() {
 	}
 
+	function wpo_front_scripts_head() {
+		wp_enqueue_script("wpo-fancybox", plugins_url( "fancybox/jquery.fancybox-1.3.4.js" , __FILE__ ), array('jquery'), '1.0.0', false );
+	}
+
 	function wpo_front_scripts() {
-		wp_enqueue_script("wpo-fancybox", plugins_url( "fancybox/jquery.fancybox-1.3.4.js" , __FILE__ ) );
-		wp_enqueue_script("wpo-scripts", plugins_url( "js/wpo-scripts.js" , __FILE__ ) );
+		
+		wp_enqueue_script("wpo-scripts", plugins_url( "js/wpo-scripts.js" , __FILE__ ), array('jquery') );
 	}
 
 	function wpo_front_styles() {
