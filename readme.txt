@@ -30,7 +30,9 @@ Features:
 * WYSIWYG editor when using custom HTML
 * Fully Responsive Popup (Tablets and Mobiles)
 
-WP Popup + Optin is very easy to use and to help you build your list of subscribers. Download the plugin now and see how it can help you build your list of subscribers! 
+WP Responsive Popup + Optin is very easy to use and to help you build your list of subscribers. Download the plugin now and see how it can help you build your list of subscribers! 
+
+[Leave comments here](http://www.logicbaseinteractive.com/wp-popup-optin) if you have any questions or requests.
 
 
 
