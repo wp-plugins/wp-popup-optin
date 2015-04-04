@@ -44,7 +44,7 @@
 			$wpo_show_every = get_option('wpo_show_every','');
 			if( $wpo_show_every == '' || !is_numeric($wpo_show_every) )
 				$wpo_show_every = 200;
-			$wpo_content_type = get_option('wpo_content_type');
+			$wpo_content_type = get_option('wpo_content_type','optin_form');
 			$wpo_popup_layout = get_option('wpo_popup_layout', 'left_image');
 			$wpo_theme_color = get_option('wpo_theme_color');
 			$wpo_popup_status = get_option('wpo_popup_status');
