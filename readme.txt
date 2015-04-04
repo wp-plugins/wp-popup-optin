@@ -20,6 +20,7 @@ https://www.youtube.com/watch?v=KIg75SsQ2xs
 You can also set how often you want the popup to show so to be sure your site visitors will not be annoyed by the popup. Totally free for you to use and we'll be adding some more features soon. Also has a feature where you can use a custom HTML as content for the popup, perfect for something like advertising a product or a notice for your visitors. WP Popup Optin is fully responsive to so it will look great when viewed using a tablet or mobile.
 
 Features:
+
 * 3 theme colors for you to choose from
 * Customize texts inside the form
 * Adding a custom image (your product or prize)
