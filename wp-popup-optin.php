@@ -6,7 +6,7 @@
 Plugin Name: WP Popup Optin
 Plugin URI: http://www.logicbaseinteractive.com/wp-popup-optin/
 Description: WP Popup + Optin is a customizable Wordpress popup plugin with an optin form to help you build your list of subscribers! Using this plugin is the best way to build your list as popup in unblockable and it comes with a few great looking theme colors for you to choose from to save you a lot of time. 
-Version: 1.0
+Version: 1.1
 Author: Logicbase Interactive
 Author URI: http://logicbaseinteractive.com/
 License: GPLv2 or later
@@ -207,7 +207,7 @@ class wpPopupOptin {
 				<div id="wpo_popup" <?php if($wpo_content_type != 'custom_html') { echo 'class="cleanslate"'; } ?>>
 					<div class="<?php echo 'wpo_' . $wpo_theme_color; ?> <?php echo 'wpo_' . $wpo_popup_layout; ?>">
 						<?php if($wpo_content_type == 'custom_html') { ?>
-							<div class="wpo_popup_custom"><?php echo stripslashes(wpautop($wpo_custom_html)); ?></div>
+							<div class="wpo_popup_custom"><?php echo do_shortcode(stripslashes(wpautop($wpo_custom_html))); ?></div>
 						<?php } else { ?>
 							<div class="wpo_popup_top">
 								<div class="wpo_popup_img"><img src="<?php echo $wpo_image_url; ?>" alt=" " /></div>
