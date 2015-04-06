@@ -30,21 +30,19 @@ Features:
 * Use a custom HTML instead of a form as content for the popup
 * WYSIWYG editor when using custom HTML
 * Fully Responsive Popup (Tablets and Mobiles)
+* Works with Contact Form 7
 
 WP Responsive Popup + Optin is very easy to use and to help you build your list of subscribers. Download the plugin now and see how it can help you build your list of subscribers! 
 
 [Leave comments here](http://www.logicbaseinteractive.com/wp-popup-optin) if you have any questions or requests.
 
-
-
 == Installation ==
-
-
 
 1. Download and Extract the zip file and copy/paste the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 2. Visit wp-admin -> WP Popup+Optin -> Settings to configure popup settings
 3. Visit wp-admin -> WP Popup+Optin -> Email List to view the list of emails
 
-
-
 == Changelog ==
+
+= 1.1 =
+* works now with contact form 7 when using custom HTML and other shortcodes
