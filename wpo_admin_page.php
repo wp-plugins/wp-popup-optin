@@ -14,7 +14,7 @@
 
 			if(isset($_POST['wpo_action'])) {
 				if($_POST['wpo_action'] == 'update') {
-					$fields_arr = array('wpo_title', 'wpo_image_url', 'wpo_text', 'wpo_popup_status', 'wpo_show_every', 'wpo_content_type','wpo_popup_layout','wpo_custom_html', 'wpo_theme_color', 'wpo_submit_text');
+					$fields_arr = array('wpo_title', 'wpo_image_url', 'wpo_text', 'wpo_popup_status', 'wpo_show_every', 'wpo_content_type','wpo_popup_layout','wpo_custom_html', 'wpo_theme_color', 'wpo_submit_text', 'wpo_title_font_size', 'wpo_text_font_size');
 
 					for($x=0;$x<count($fields_arr);$x++) {
 						$field_name = $fields_arr[$x];
@@ -50,6 +50,8 @@
 			$wpo_popup_status = get_option('wpo_popup_status');
 			$wpo_custom_html = stripslashes(stripslashes(get_option('wpo_custom_html')));	
 			$wpo_submit_text = htmlentities(stripslashes(stripslashes(get_option('wpo_submit_text'))));		
+			$wpo_title_font_size = get_option('wpo_title_font_size', '28');
+			$wpo_text_font_size = get_option('wpo_text_font_size', '15');
 			?>
 
 			<form method="post" id="settings">
@@ -64,6 +66,17 @@
 
 			<p><b>Title</b><br />
 			<input type="text" name="wpo_title" value="<?php echo $wpo_title; ?>" /></p>
+
+			<p><b>Title Font Size</b><br />
+				<select name="wpo_title_font_size">
+					<?php for($x=12;$x<=60;$x++) {
+						$is_selected = '';
+						if($wpo_title_font_size == $x)
+							$is_selected = 'selected="selected"';
+						echo '<option value="' . $x . '" ' . $is_selected . '>' . $x . '</option>';
+					} ?>
+				</select>px
+			</p>
 
 			<p><b>Image URL:</b><br />
 			                <img class="wpo_image" src="<?php echo $wpo_image_url; ?>" style="max-height: 100px; width: auto;" alt="no image" /><br />
@@ -129,6 +142,17 @@
 			<p>
 				<b>Text</b><br />
 				<textarea name="wpo_text"><?php echo $wpo_text; ?></textarea>
+			</p>
+
+			<p><b>Text Font Size</b><br />
+				<select name="wpo_text_font_size">
+					<?php for($x=12;$x<=60;$x++) {
+						$is_selected = '';
+						if($wpo_text_font_size == $x)
+							$is_selected = 'selected="selected"';						
+						echo '<option value="' . $x . '" ' . $is_selected . '>' . $x . '</option>';
+					} ?>
+				</select>px
 			</p>
 
 			<p><b>Button Text:</b><br />

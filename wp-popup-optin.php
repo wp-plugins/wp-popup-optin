@@ -6,7 +6,7 @@
 Plugin Name: WP Popup Optin
 Plugin URI: http://www.logicbaseinteractive.com/wp-popup-optin/
 Description: WP Popup + Optin is a customizable Wordpress popup plugin with an optin form to help you build your list of subscribers! Using this plugin is the best way to build your list as popup in unblockable and it comes with a few great looking theme colors for you to choose from to save you a lot of time. 
-Version: 1.1
+Version: 1.0
 Author: Logicbase Interactive
 Author URI: http://logicbaseinteractive.com/
 License: GPLv2 or later
@@ -44,7 +44,7 @@ class wpPopupOptin {
 		add_action( 'init', array( $this, 'wpo_setcookie' ) );
 		add_action( 'wp_head', array( $this, 'wpo_getcookie' ) );
 		add_action( 'admin_menu', array( $this, 'wpo_admin_actions' ) );
-		add_action( 'wp_head', array( $this, 'wpo_front_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'wpo_front_styles' ) );
 		
 		add_action( 'wp_footer', array( $this, 'wpo_front_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'wpo_show_content' ) );		
@@ -200,9 +200,14 @@ class wpPopupOptin {
 			$wpo_popup_layout = get_option('wpo_popup_layout');
 			$wpo_custom_html = get_option('wpo_custom_html');
 			$wpo_submit_text = get_option('wpo_submit_text');		
-
+			$wpo_title_font_size = get_option('wpo_title_font_size', '28');
+			$wpo_text_font_size = get_option('wpo_text_font_size', '15');
 
 		?>
+			<style type="text/css">
+			#wpo_popup h3 { font-size: <?php echo $wpo_title_font_size; ?>px !important; }
+			#wpo_popup p { font-size: <?php echo $wpo_text_font_size; ?>px !important; }
+			</style>
 			<div style="display: none;">
 				<div id="wpo_popup" <?php if($wpo_content_type != 'custom_html') { echo 'class="cleanslate"'; } ?>>
 					<div class="<?php echo 'wpo_' . $wpo_theme_color; ?> <?php echo 'wpo_' . $wpo_popup_layout; ?>">
