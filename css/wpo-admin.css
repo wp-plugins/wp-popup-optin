@@ -1,0 +1,29 @@
+#wpo_admin_form { }
+#wpo_admin_form input[type=text] { width: 350px;  }
+#wpo_admin_form textarea { width: 350px; height: 150px; }
+
+#toplevel_page_WPPopupOptin .wp-first-item { display: none; }
+
+.wpo_email_tbl { border-collapse: collapse; margin: 25px 0;  }
+.wpo_email_tbl td { padding: 4px 10px; border: 1px solid #ccc;  }
+
+.part_left { width: 620px; float: left; margin-right: 40px; }
+.part_right { width: 300px; float: right; }
+.custom_html, .optin_form { display: none; }
+.active { display: block; }
+.clear { clear: both; }
+#settings textarea {width: 100%; }
+
+.themes { /*overflow: hidden; height: 100px*/ }
+.wpo_layouts_cont span,
+.themes span { width: 32%; margin-right: 1%; float: left; opacity: .7; cursor: pointer; }
+.wpo_layouts_cont span { margin-bottom: 6px; }
+.wpo_layouts_cont span img,
+.themes span img { max-width: 100%; display: block; }
+.wpo_layouts_cont span img { border: 1px solid #ccc;   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+.wpo_layouts_cont .selected,
+.themes .selected { border: 4px solid rgba(255,127,39,.8); border-radius: 3px; opacity: 1;   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
