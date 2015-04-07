@@ -45,3 +45,6 @@ WP Responsive Popup + Optin is very easy to use and to help you build your list 
 
 = 1.1 =
 * works now with contact form 7 when using custom HTML and other shortcodes
+
+= 1.2 =
+* can now change font size of title and text in admin settings
