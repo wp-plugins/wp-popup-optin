@@ -48,3 +48,6 @@ WP Responsive Popup + Optin is very easy to use and to help you build your list 
 
 = 1.2 =
 * can now change font size of title and text in admin settings
+
+= 1.3 =
+* fixed cookie issue with Chrome
