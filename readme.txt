@@ -4,7 +4,7 @@ Contributors: sphex1987, d_estanilla
 Tags: popup, optin, subscribers, list, email marketing, responsive popup
 Requires at least: 3.2
 Tested up to: 4.1.1
-Stable tag: 1.2
+Stable tag: 1.3
 
 Stable tag: trunk
 License: GPLv2 or later
