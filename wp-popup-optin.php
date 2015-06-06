@@ -175,11 +175,11 @@ class wpPopupOptin {
 			";
 
 			if($wpo_popup_status == '1')
-	   			setcookie( $get_c_name, '1', time()+ ( $get_duration * 86400 ), COOKIEPATH, COOKIE_DOMAIN );
+	   			setcookie( $get_c_name, '1', time()+ ( $get_duration * 86400 ), "/", NULL );
 		} else {
 			if(isset($_POST['wpo_clear_cookie'])) {
 				if($_POST['wpo_clear_cookie'] == 'yes') {
-					setcookie( $get_c_name, '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
+					setcookie( $get_c_name, '', time() - 3600, "/", NULL );
 					$rand_text = 'wpo_' . $this->wpo_RandomString();
 					update_option('wpo_cookie_name',$rand_text);
 				}
